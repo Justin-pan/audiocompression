@@ -28,7 +28,7 @@ float psnr(std::vector<float> rawData, std::vector<float> decodedData) {
   retVal += (rawData[i] - decodedData[i]) * (rawData[i] - decodedData[i]);
  }
  retVal = retVal/sizeOfRawData;
- float logOfMax = log(INT_MAX - 1)/log(10);
+ float logOfMax = log(1)/log(10);
  float logOfMSE = log(retVal)/log(10);
  retVal = (20 * logOfMax) - (10 * logOfMSE);
  return retVal;
